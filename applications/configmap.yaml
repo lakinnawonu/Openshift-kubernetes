@@ -4,4 +4,4 @@ data:
 kind: ConfigMap
 metadata:
   name: ex280-cm
-  namespace: czech
+  namespace: melton
