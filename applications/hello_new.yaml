@@ -1,10 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: ernie2
-  name: ernie2
-  namespace: czech
+  name: ernie
+  namespace: melton
 spec:
   progressDeadlineSeconds: 600
   replicas: 3
