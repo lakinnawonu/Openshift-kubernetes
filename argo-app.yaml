@@ -5,14 +5,14 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    server:
-    namespace:
+    server: https://kubernetes.default.svc
+    namespace: demi
   project: default
   revisionHistoryLimit:
   source:
-    repoURL:
+    repoURL: https://github.com/lakinnawonu/Openshift-kubernetes.git
     targetRevision: HEAD
-    path:
+    path: applications
   syncPolicy:
     automated:
       prune: true
