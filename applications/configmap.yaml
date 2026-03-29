@@ -1,7 +1,0 @@
-apiVersion: v1
-data:
-  RESPONSE: six czech cricket critics
-kind: ConfigMap
-metadata:
-  name: ex280-cm
-  namespace: melton
