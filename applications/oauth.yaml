@@ -8,23 +8,19 @@ metadata:
       {"apiVersion":"config.openshift.io/v1","kind":"OAuth","metadata":{"annotations":{},"name":"cluster"},"spec":{"identityProviders":[{"htpasswd":{"fileData":{"name":"htpass-secret"}},"mappingMethod":"claim","name":"developer","type":"HTPasswd"}],"tokenConfig":{"accessTokenMaxAgeSeconds":31536000}}}
     release.openshift.io/create-only: "true"
   name: cluster
-  ownerReferences:
-  - apiVersion: config.openshift.io/v1
-    kind: ClusterVersion
-    name: version
-  spec:
-    identityProviders:
-      - htpasswd:
-          fileData:
-            name: htpass-secret
-        mappingMethod: claim
-        name: developer
-        type: HTPasswd
-      - htpasswd:
-          fileData:
-            name: htpass-idp-ex280
-        mappingMethod: claim
-        name: htpass-ex280
-        type: HTPasswd
-    tokenConfig:
-      accessTokenMaxAgeSeconds: 31536000
+spec:
+  identityProviders:
+  - htpasswd:
+      fileData:
+        name: htpass-secret
+    mappingMethod: claim
+    name: developer
+    type: HTPasswd
+  - htpasswd:
+      fileData:
+        name: htpass-idp-ex280
+    mappingMethod: claim
+    name: htpass-ex280
+    type: HTPasswd
+  tokenConfig:
+   accessTokenMaxAgeSeconds: 31536000
