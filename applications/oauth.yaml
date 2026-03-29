@@ -7,16 +7,11 @@ metadata:
     kubectl.kubernetes.io/last-applied-configuration: |
       {"apiVersion":"config.openshift.io/v1","kind":"OAuth","metadata":{"annotations":{},"name":"cluster"},"spec":{"identityProviders":[{"htpasswd":{"fileData":{"name":"htpass-secret"}},"mappingMethod":"claim","name":"developer","type":"HTPasswd"}],"tokenConfig":{"accessTokenMaxAgeSeconds":31536000}}}
     release.openshift.io/create-only: "true"
-  creationTimestamp: "2026-01-29T14:50:17Z"
-  generation: 2
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
-    uid: b36be575-bb88-482d-855b-353fd3f9ee60
-  resourceVersion: "21898"
-  uid: d6748baf-d57f-4fbd-a1ff-9a354aaca3b2
 spec:
   identityProviders:
   - htpasswd:
@@ -28,8 +23,8 @@ spec:
   - htpasswd:
       fileData:
         name: htpass-idp-ex280
-      mappingMethod: claim
-      name: htpass-ex280
-      type: HTPasswd
+    mappingMethod: claim
+    name: htpass-ex280
+    type: HTPasswd
   tokenConfig:
     accessTokenMaxAgeSeconds: 31536000
