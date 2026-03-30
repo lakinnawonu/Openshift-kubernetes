@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: networking
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: applications
+  project: default
+  revisionHistoryLimit:
+  source:
+    repoURL: https://github.com/lakinnawonu/Openshift-kubernetes.git
+    targetRevision: HEAD
+    path: ingress-policy
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreatNamespace=true
