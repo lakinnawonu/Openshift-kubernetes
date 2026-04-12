@@ -1,7 +1,0 @@
-apiVersion: v1
-data:
-  APP_MODE: production
-kind: ConfigMap
-metadata:
-  name: app-config
-  namespace: kodekloud
